@@ -7,10 +7,18 @@ import(
 "time"
 "html/template"
 )
+
+type Instance struct {
+        Pod        string
+        TS         string
+        Version    string
+}
+
  
 func indexHandler( w http.ResponseWriter, r *http.Request){
 tpl := template.Must(template.New("out").Parse(html))
 i := &Instance{}
+i = newInstance()
 tpl.Execute(w, i)
  
 }
@@ -20,11 +28,6 @@ fmt.Fprintf(w, "I'm fine Version : %s ", version)
 
 }
 
-type Instance struct {
-	Pod        string
-	TS	   string
-	Version    string
-}
 
 func newInstance() *Instance {
 	var i = new(Instance)
