@@ -3,7 +3,8 @@ package main
 const (
 	html = `<HTML>
 <HEAD>
-	<TITLE></TITLE>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+	<TITLE>Go Lang Test App</TITLE>
 	<STYLE TYPE="text/css">
 	<!--
 		@page { margin: 2cm }
@@ -13,32 +14,30 @@ const (
 	</STYLE>
 </HEAD>
 <BODY LANG="en-IN" DIR="LTR">
-<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0>
-	<COL WIDTH=256*>
+<div class="container">
+<div class="row">
+<div class="col s2">&nbsp;</div>
+<div class="col s8">
+<div class="card orange">
+<div class="card-content white-text">
+<div class="card-title">Pod that serviced this request</div>
+</div>
+<div class="card-content white">
+<TABLE CLASS="bordered">
+<TBODY>
 	<TR>
-		<TD WIDTH=50% VALIGN=TOP>
-			<P STYLE="background: SPRINGGREEN"><b>Pod ID</b> </P>
-		</TD>
-                <TD WIDTH=50% VALIGN=TOP>
-                        <P STYLE="background: SPRINGGREEN">{{.Pod}}</P>
-                </TD>
+		<TD>Pod ID</TD>
+                <TD>{{.Pod}}</TD>
 	</TR>
 	<TR>
-	        <TD WIDTH=50% VALIGN=TOP>
-                        <P STYLE="background: SPRINGGREEN"><b>Version</b> </P>
-                </TD>
-                <TD WIDTH=50% VALIGN=TOP>
-                        <P STYLE="background: SPRINGGREEN">{{.Version}}</P>
-                </TD>
+	        <TD>Version</TD>
+                <TD>{{.Version}}</TD>
 	</TR>
 	<TR>
-                <TD WIDTH=50% VALIGN=TOP>
-                        <P STYLE="background: SPRINGGREEN"><b>Timestamp</b> </P>
-                </TD>
-                <TD WIDTH=50% VALIGN=TOP>
-                        <P STYLE="background: SPRINGGREEN">{{.TS}}</P>
-                </TD>
+                <TD>Timestamp</TD>
+                <TD>{{.TS}}</TD>
 	</TR>
+</TBODY>
 </TABLE>
 <P STYLE="margin-bottom: 0cm"><BR>
 </P>
