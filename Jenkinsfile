@@ -9,5 +9,8 @@ node
   stage 'Build image'
   sh("docker build -t ${imageTag} .")
 
+stage 'Push image to registry'
+  sh("docker push ${imageTag}")
+
 }
 
