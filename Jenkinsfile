@@ -1,6 +1,6 @@
 node 
 {
-withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '<CREDENTIAL_ID>',
+withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker-hub-creds',
 usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
 
     def appName = "demo-go-app"
