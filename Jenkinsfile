@@ -14,7 +14,7 @@ usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
       sh("docker login -u ${USERNAME} -p ${PASSWORD} ")
       sh("docker push ${imageTag}")
     stage 'Deploy Application'
-      sh("kubectl apply -f ./kubernetes/")
+      sh("kubectl apply -n default -f ./kubernetes/")
   }
 
 }
