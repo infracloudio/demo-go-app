@@ -61,7 +61,7 @@ spec:
       labels:
         app: demo-app
         role: frontend
-        env: canary
+        # env: canary
         color: blue
     spec:
       containers:
